@@ -1,0 +1,9 @@
+J:\IES\1er Semestre\Programacion\Prog Log 1 - Guia de Ejercicios\Prog Log 1 - Guia de Ejercicios\bin\Debug\Prog Log 1 - Guia de Ejercicios.exe
+J:\IES\1er Semestre\Programacion\Prog Log 1 - Guia de Ejercicios\Prog Log 1 - Guia de Ejercicios\bin\Debug\Prog Log 1 - Guia de Ejercicios.pdb
+J:\IES\1er Semestre\Programacion\Prog Log 1 - Guia de Ejercicios\Prog Log 1 - Guia de Ejercicios\bin\Debug\Prog Log 1 - Guia de Ejercicios.xml
+J:\IES\1er Semestre\Programacion\Prog Log 1 - Guia de Ejercicios\Prog Log 1 - Guia de Ejercicios\obj\x86\Debug\Prog_Log_1___Guia_de_Ejercicios.Main.resources
+J:\IES\1er Semestre\Programacion\Prog Log 1 - Guia de Ejercicios\Prog Log 1 - Guia de Ejercicios\obj\x86\Debug\Prog_Log_1___Guia_de_Ejercicios.Resources.resources
+J:\IES\1er Semestre\Programacion\Prog Log 1 - Guia de Ejercicios\Prog Log 1 - Guia de Ejercicios\obj\x86\Debug\Prog Log 1 - Guia de Ejercicios.vbproj.GenerateResource.Cache
+J:\IES\1er Semestre\Programacion\Prog Log 1 - Guia de Ejercicios\Prog Log 1 - Guia de Ejercicios\obj\x86\Debug\Prog Log 1 - Guia de Ejercicios.exe
+J:\IES\1er Semestre\Programacion\Prog Log 1 - Guia de Ejercicios\Prog Log 1 - Guia de Ejercicios\obj\x86\Debug\Prog Log 1 - Guia de Ejercicios.xml
+J:\IES\1er Semestre\Programacion\Prog Log 1 - Guia de Ejercicios\Prog Log 1 - Guia de Ejercicios\obj\x86\Debug\Prog Log 1 - Guia de Ejercicios.pdb
