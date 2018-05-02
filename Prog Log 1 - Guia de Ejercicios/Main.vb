@@ -1,6 +1,10 @@
 ﻿Public Class Main
-    
-    'Codigo de Primer tab, programa clasificar numeros
+    'Variables para tab 2, el de N numeros
+    Dim mayor As Integer = 0
+    Dim menor As Integer = 0
+    Dim Cantidad As Integer
+    Dim promedio As Decimal
+    Dim acumulador As Integer = 0
     Private Sub btnClasificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClasificar.Click
         If txtNum.Text < 0 Then
             lblResultado.Text = "Negativo"
@@ -23,18 +27,15 @@
 
     Private Sub tab2btnIngresar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tab2btnIngresar.Click
         Dim numero As Integer = Val(tab2txtNumero.Text)
-        Dim mayor As Integer = 0
-        Dim menor, cantidad As Integer
-        Dim promedio As Decimal
-        Dim acumulador As Integer = 0
-        'For i = 1 To numero do
-        If numero > acumulador Then
-            acumulador = numero
+        If numero > mayor Then
+            mayor = numero
+            tab2lblMayor.Text = mayor
         End If
-        If acumulador > mayor Then
-            acumulador = mayor
+
+        If numero < mayor Then
+            menor = mayor
+            tab2lblMenor.Text = menor
         End If
-        tab2lblMayor.Text = mayor
     End Sub
     'Codigo de 3er tab COMPARADOR DE NUMEROS
     Private Sub tab3btnComparar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tab3btnComparar.Click
@@ -47,9 +48,9 @@
             If tab3txtNroB.Text > tab3txtNroA.Text And tab3txtNroB.Text > tab3txtNroC.Text Then
                 mayor3 = tab3txtNroB.Text
             Else
-                 mayor3 = tab3txtNroC.Text
+                mayor3 = tab3txtNroC.Text
             End If
-         End If
+        End If
 
         tab3lblMayor.Text = mayor3
 
