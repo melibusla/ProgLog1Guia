@@ -5,6 +5,10 @@
     Dim Cantidad As Integer = 0
     Dim promedio As Decimal
     Dim acumulador As Integer = 0
+    ' variables tab 4 fecha valida
+    Dim D As Integer
+    Dim M As Integer
+    Dim A As Integer
     Private Sub btnClasificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClasificar.Click
         If txtNum.Text < 0 Then
             lblResultado.Text = "Negativo"
@@ -82,4 +86,50 @@
             tab3lblIguales.Text = "Todos los números son iguales."
         End If
     End Sub
+    'TAB 4 - VALIDAR FECHA 
+    Private Sub tab4btnValidar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tab4btnValidar.Click
+        If FechaValida(Val(tab4txtMes.Text), Val(tab4txtMes.Text), Val(tab4txtAño.Text)) = True Then
+            tab4lblResultado.Text = "Fecha Valida"
+        Else
+            tab4lblResultado.Text = "Fecha INVALIDA!"
+        End If
+    End Sub
+    Function FechaValida(ByVal D, ByVal M, ByVal A) As Boolean
+        Dim Valida As Boolean
+        If M < 1 Or M > 12 Then
+            Valida = False
+        Else
+            If (M = 1 Or M = 3 Or M = 5 Or M = 7 Or M = 8 Or M = 10 Or M = 12) And (D < 1 Or D > 31) Then
+                Valida = False
+            Else
+                If (M = 4 Or M = 6 Or M = 9 Or M = 11) And (D < 1 Or D > 30) Then
+                    Valida = False
+                Else
+                    If M = 2 And Bisiesto(A) = True And (D < 1 Or D > 29) Then
+                        Valida = False
+                    Else
+                        If M = 2 And Bisiesto(A) = False And (D < 1 Or D > 28) Then
+                            Valida = False
+                        End If
+                    End If
+                End If
+            End If
+        End If
+        Return Valida
+    End Function
+
+    Function Bisiesto(ByVal A) As Boolean
+        Dim esBisiesto As Boolean = False
+
+        If A Mod 4 = 0 Then
+            If A Mod 100 = 0 Then
+                If A Mod 400 = 0 Then
+                    esBisiesto = True
+                End If
+            Else
+                esBisiesto = True
+            End If
+        End If
+        Return esBisiesto
+    End Function
 End Class

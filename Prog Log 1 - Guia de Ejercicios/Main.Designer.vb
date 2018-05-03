@@ -46,6 +46,7 @@ Partial Class Main
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.tab3lblIguales = New System.Windows.Forms.Label()
         Me.tab3lblMenor = New System.Windows.Forms.Label()
         Me.tab3lblMayor = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -58,12 +59,23 @@ Partial Class Main
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.tab3lblIguales = New System.Windows.Forms.Label()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.tab4txtDia = New System.Windows.Forms.TextBox()
+        Me.tab4txtMes = New System.Windows.Forms.TextBox()
+        Me.tab4txtAño = New System.Windows.Forms.TextBox()
+        Me.tab4lblResultado = New System.Windows.Forms.Label()
+        Me.tab4btnValidar = New System.Windows.Forms.Button()
         Me.TabGuia.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabGuia
@@ -71,11 +83,12 @@ Partial Class Main
         Me.TabGuia.Controls.Add(Me.TabPage1)
         Me.TabGuia.Controls.Add(Me.TabPage2)
         Me.TabGuia.Controls.Add(Me.TabPage3)
+        Me.TabGuia.Controls.Add(Me.TabPage4)
         Me.TabGuia.Location = New System.Drawing.Point(12, 12)
         Me.TabGuia.Multiline = True
         Me.TabGuia.Name = "TabGuia"
         Me.TabGuia.SelectedIndex = 0
-        Me.TabGuia.Size = New System.Drawing.Size(322, 403)
+        Me.TabGuia.Size = New System.Drawing.Size(322, 374)
         Me.TabGuia.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight
         Me.TabGuia.TabIndex = 0
         '
@@ -90,7 +103,7 @@ Partial Class Main
         Me.TabPage1.Location = New System.Drawing.Point(4, 40)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(314, 359)
+        Me.TabPage1.Size = New System.Drawing.Size(314, 330)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "1- Clasificación de Números"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -163,7 +176,7 @@ Partial Class Main
         Me.TabPage2.Location = New System.Drawing.Point(4, 40)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(314, 359)
+        Me.TabPage2.Size = New System.Drawing.Size(314, 330)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "2- Estadística de Números"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -324,10 +337,21 @@ Partial Class Main
         Me.TabPage3.Location = New System.Drawing.Point(4, 40)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(314, 359)
+        Me.TabPage3.Size = New System.Drawing.Size(314, 330)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "3 - Comparador de Números"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'tab3lblIguales
+        '
+        Me.tab3lblIguales.AutoSize = True
+        Me.tab3lblIguales.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
+                        Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tab3lblIguales.ForeColor = System.Drawing.Color.DarkGreen
+        Me.tab3lblIguales.Location = New System.Drawing.Point(23, 303)
+        Me.tab3lblIguales.Name = "tab3lblIguales"
+        Me.tab3lblIguales.Size = New System.Drawing.Size(0, 16)
+        Me.tab3lblIguales.TabIndex = 12
         '
         'tab3lblMenor
         '
@@ -443,22 +467,125 @@ Partial Class Main
         Me.Label7.Text = "Ingrese tres números para compararlos y determinar automáticamente el Mayor y el " & _
             "Menor de ellos."
         '
-        'tab3lblIguales
+        'TabPage4
         '
-        Me.tab3lblIguales.AutoSize = True
-        Me.tab3lblIguales.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
-                        Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tab3lblIguales.ForeColor = System.Drawing.Color.DarkGreen
-        Me.tab3lblIguales.Location = New System.Drawing.Point(23, 303)
-        Me.tab3lblIguales.Name = "tab3lblIguales"
-        Me.tab3lblIguales.Size = New System.Drawing.Size(0, 16)
-        Me.tab3lblIguales.TabIndex = 12
+        Me.TabPage4.Controls.Add(Me.tab4btnValidar)
+        Me.TabPage4.Controls.Add(Me.tab4lblResultado)
+        Me.TabPage4.Controls.Add(Me.tab4txtAño)
+        Me.TabPage4.Controls.Add(Me.tab4txtMes)
+        Me.TabPage4.Controls.Add(Me.tab4txtDia)
+        Me.TabPage4.Controls.Add(Me.Label20)
+        Me.TabPage4.Controls.Add(Me.Label19)
+        Me.TabPage4.Controls.Add(Me.Label18)
+        Me.TabPage4.Controls.Add(Me.Label17)
+        Me.TabPage4.Controls.Add(Me.Label16)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(314, 330)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "4- Fecha Valida?"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(32, 23)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(262, 70)
+        Me.Label16.TabIndex = 0
+        Me.Label16.Text = "Ingrese día, mes y año de una fecha para determinar si se trata de una fecha váli" & _
+            "da o no."
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(35, 106)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(29, 16)
+        Me.Label17.TabIndex = 1
+        Me.Label17.Text = "Día"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(35, 144)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(34, 16)
+        Me.Label18.TabIndex = 2
+        Me.Label18.Text = "Mes"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(35, 182)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(32, 16)
+        Me.Label19.TabIndex = 3
+        Me.Label19.Text = "Año"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(35, 237)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(73, 16)
+        Me.Label20.TabIndex = 4
+        Me.Label20.Text = "Resultado:"
+        '
+        'tab4txtDia
+        '
+        Me.tab4txtDia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tab4txtDia.Location = New System.Drawing.Point(71, 106)
+        Me.tab4txtDia.Name = "tab4txtDia"
+        Me.tab4txtDia.Size = New System.Drawing.Size(61, 22)
+        Me.tab4txtDia.TabIndex = 5
+        '
+        'tab4txtMes
+        '
+        Me.tab4txtMes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tab4txtMes.Location = New System.Drawing.Point(71, 144)
+        Me.tab4txtMes.Name = "tab4txtMes"
+        Me.tab4txtMes.Size = New System.Drawing.Size(61, 22)
+        Me.tab4txtMes.TabIndex = 6
+        '
+        'tab4txtAño
+        '
+        Me.tab4txtAño.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tab4txtAño.Location = New System.Drawing.Point(74, 182)
+        Me.tab4txtAño.Name = "tab4txtAño"
+        Me.tab4txtAño.Size = New System.Drawing.Size(58, 22)
+        Me.tab4txtAño.TabIndex = 7
+        '
+        'tab4lblResultado
+        '
+        Me.tab4lblResultado.AutoSize = True
+        Me.tab4lblResultado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tab4lblResultado.Location = New System.Drawing.Point(114, 237)
+        Me.tab4lblResultado.Name = "tab4lblResultado"
+        Me.tab4lblResultado.Size = New System.Drawing.Size(92, 16)
+        Me.tab4lblResultado.TabIndex = 8
+        Me.tab4lblResultado.Text = "____________"
+        '
+        'tab4btnValidar
+        '
+        Me.tab4btnValidar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tab4btnValidar.Location = New System.Drawing.Point(175, 136)
+        Me.tab4btnValidar.Name = "tab4btnValidar"
+        Me.tab4btnValidar.Size = New System.Drawing.Size(75, 23)
+        Me.tab4btnValidar.TabIndex = 9
+        Me.tab4btnValidar.Text = "Validar"
+        Me.tab4btnValidar.UseVisualStyleBackColor = True
         '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(349, 431)
+        Me.ClientSize = New System.Drawing.Size(349, 395)
         Me.Controls.Add(Me.TabGuia)
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -472,6 +599,8 @@ Partial Class Main
         Me.GroupBox1.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -512,5 +641,16 @@ Partial Class Main
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents tab3lblIguales As System.Windows.Forms.Label
+    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents tab4btnValidar As System.Windows.Forms.Button
+    Friend WithEvents tab4lblResultado As System.Windows.Forms.Label
+    Friend WithEvents tab4txtAño As System.Windows.Forms.TextBox
+    Friend WithEvents tab4txtMes As System.Windows.Forms.TextBox
+    Friend WithEvents tab4txtDia As System.Windows.Forms.TextBox
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
 
 End Class
