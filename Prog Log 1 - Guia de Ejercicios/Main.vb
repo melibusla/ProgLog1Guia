@@ -23,6 +23,8 @@
         tab2lblMayor.Text = "________"
         tab2lblMenor.Text = "________"
         tab2lblPromedio.Text = "________"
+        acumulador = 0
+        promedio = 0
     End Sub
 
     Private Sub tab2btnIngresar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tab2btnIngresar.Click
@@ -40,9 +42,8 @@
         Cantidad = Cantidad + 1
         tab2lblCantidad.Text = Cantidad
 
-        For i = 1 To Cantidad
-            acumulador = acumulador + numero
-        Next i
+        acumulador = acumulador + numero
+
         promedio = acumulador / Cantidad
         tab2lblPromedio.Text = promedio
     End Sub
