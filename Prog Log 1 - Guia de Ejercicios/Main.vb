@@ -6,9 +6,8 @@
     Dim promedio As Decimal
     Dim acumulador As Integer = 0
     ' variables tab 4 fecha valida
-    Dim D As Integer
-    Dim M As Integer
-    Dim A As Integer
+    Dim D, M, A As Integer
+    
     Private Sub btnClasificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClasificar.Click
         If txtNum.Text < 0 Then
             lblResultado.Text = "Negativo"
@@ -87,15 +86,15 @@
         End If
     End Sub
     'TAB 4 - VALIDAR FECHA 
-    Private Sub tab4btnValidar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tab4btnValidar.Click
-        If FechaValida(Val(tab4txtMes.Text), Val(tab4txtMes.Text), Val(tab4txtAño.Text)) = True Then
+    Public Sub tab4btnValidar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tab4btnValidar.Click
+        If FechaValida(Val(tab4txtDia.Text), Val(tab4txtMes.Text), Val(tab4txtAño.Text)) = True Then
             tab4lblResultado.Text = "Fecha Valida"
         Else
             tab4lblResultado.Text = "Fecha INVALIDA!"
         End If
     End Sub
-    Function FechaValida(ByVal D, ByVal M, ByVal A) As Boolean
-        Dim Valida As Boolean
+    Public Function FechaValida(ByVal D, ByVal M, ByVal A) As Boolean
+        Dim Valida As Boolean = True
         If M < 1 Or M > 12 Then
             Valida = False
         Else
@@ -118,7 +117,7 @@
         Return Valida
     End Function
 
-    Function Bisiesto(ByVal A) As Boolean
+    Public Function Bisiesto(ByVal A) As Boolean
         Dim esBisiesto As Boolean = False
 
         If A Mod 4 = 0 Then
@@ -131,5 +130,23 @@
             End If
         End If
         Return esBisiesto
+    End Function
+
+    Private Sub tab5btnCalcular_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tab5btnCalcular.Click
+        'Dim fA As String = tab5txtA.Text
+        'Dim fB As String = tab5txtB.Text
+        tab5lblResultado.Text = MayorFecha(tab5txtA.Text, tab5txtB.Text)
+    End Sub
+
+    Function MayorFecha(ByVal fA, ByVal fB) As String
+        Dim auxA, auxB As String
+        auxA = fA.substring(7, 4) & fA.substring(4, 2) & fA.subString(1, 2)
+        auxB = fB.substring(7, 4) & fB.substring(4, 2) & fB.subString(1, 2)
+
+        If auxA > auxB Then
+            Return fA
+        Else
+            Return fB
+        End If
     End Function
 End Class

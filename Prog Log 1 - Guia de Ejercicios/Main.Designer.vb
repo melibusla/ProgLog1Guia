@@ -60,22 +60,32 @@ Partial Class Main
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.tab4txtDia = New System.Windows.Forms.TextBox()
-        Me.tab4txtMes = New System.Windows.Forms.TextBox()
-        Me.tab4txtAño = New System.Windows.Forms.TextBox()
-        Me.tab4lblResultado = New System.Windows.Forms.Label()
         Me.tab4btnValidar = New System.Windows.Forms.Button()
+        Me.tab4lblResultado = New System.Windows.Forms.Label()
+        Me.tab4txtAño = New System.Windows.Forms.TextBox()
+        Me.tab4txtMes = New System.Windows.Forms.TextBox()
+        Me.tab4txtDia = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.tab5lblResultado = New System.Windows.Forms.Label()
+        Me.tab5txtA = New System.Windows.Forms.TextBox()
+        Me.tab5txtB = New System.Windows.Forms.TextBox()
+        Me.tab5btnCalcular = New System.Windows.Forms.Button()
         Me.TabGuia.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabGuia
@@ -84,6 +94,7 @@ Partial Class Main
         Me.TabGuia.Controls.Add(Me.TabPage2)
         Me.TabGuia.Controls.Add(Me.TabPage3)
         Me.TabGuia.Controls.Add(Me.TabPage4)
+        Me.TabGuia.Controls.Add(Me.TabPage5)
         Me.TabGuia.Location = New System.Drawing.Point(12, 12)
         Me.TabGuia.Multiline = True
         Me.TabGuia.Name = "TabGuia"
@@ -334,10 +345,10 @@ Partial Class Main
         Me.TabPage3.Controls.Add(Me.Label11)
         Me.TabPage3.Controls.Add(Me.Label9)
         Me.TabPage3.Controls.Add(Me.Label7)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 58)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(314, 330)
+        Me.TabPage3.Size = New System.Drawing.Size(314, 312)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "3 - Comparador de Números"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -479,87 +490,23 @@ Partial Class Main
         Me.TabPage4.Controls.Add(Me.Label18)
         Me.TabPage4.Controls.Add(Me.Label17)
         Me.TabPage4.Controls.Add(Me.Label16)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 58)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(314, 330)
+        Me.TabPage4.Size = New System.Drawing.Size(314, 312)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "4- Fecha Valida?"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'Label16
+        'tab4btnValidar
         '
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(32, 23)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(262, 70)
-        Me.Label16.TabIndex = 0
-        Me.Label16.Text = "Ingrese día, mes y año de una fecha para determinar si se trata de una fecha váli" & _
-            "da o no."
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(35, 106)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(29, 16)
-        Me.Label17.TabIndex = 1
-        Me.Label17.Text = "Día"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(35, 144)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(34, 16)
-        Me.Label18.TabIndex = 2
-        Me.Label18.Text = "Mes"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(35, 182)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(32, 16)
-        Me.Label19.TabIndex = 3
-        Me.Label19.Text = "Año"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(35, 237)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(73, 16)
-        Me.Label20.TabIndex = 4
-        Me.Label20.Text = "Resultado:"
-        '
-        'tab4txtDia
-        '
-        Me.tab4txtDia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tab4txtDia.Location = New System.Drawing.Point(71, 106)
-        Me.tab4txtDia.Name = "tab4txtDia"
-        Me.tab4txtDia.Size = New System.Drawing.Size(61, 22)
-        Me.tab4txtDia.TabIndex = 5
-        '
-        'tab4txtMes
-        '
-        Me.tab4txtMes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tab4txtMes.Location = New System.Drawing.Point(71, 144)
-        Me.tab4txtMes.Name = "tab4txtMes"
-        Me.tab4txtMes.Size = New System.Drawing.Size(61, 22)
-        Me.tab4txtMes.TabIndex = 6
-        '
-        'tab4txtAño
-        '
-        Me.tab4txtAño.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tab4txtAño.Location = New System.Drawing.Point(74, 182)
-        Me.tab4txtAño.Name = "tab4txtAño"
-        Me.tab4txtAño.Size = New System.Drawing.Size(58, 22)
-        Me.tab4txtAño.TabIndex = 7
+        Me.tab4btnValidar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tab4btnValidar.Location = New System.Drawing.Point(175, 136)
+        Me.tab4btnValidar.Name = "tab4btnValidar"
+        Me.tab4btnValidar.Size = New System.Drawing.Size(75, 23)
+        Me.tab4btnValidar.TabIndex = 9
+        Me.tab4btnValidar.Text = "Validar"
+        Me.tab4btnValidar.UseVisualStyleBackColor = True
         '
         'tab4lblResultado
         '
@@ -571,15 +518,172 @@ Partial Class Main
         Me.tab4lblResultado.TabIndex = 8
         Me.tab4lblResultado.Text = "____________"
         '
-        'tab4btnValidar
+        'tab4txtAño
         '
-        Me.tab4btnValidar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tab4btnValidar.Location = New System.Drawing.Point(175, 136)
-        Me.tab4btnValidar.Name = "tab4btnValidar"
-        Me.tab4btnValidar.Size = New System.Drawing.Size(75, 23)
-        Me.tab4btnValidar.TabIndex = 9
-        Me.tab4btnValidar.Text = "Validar"
-        Me.tab4btnValidar.UseVisualStyleBackColor = True
+        Me.tab4txtAño.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tab4txtAño.Location = New System.Drawing.Point(74, 182)
+        Me.tab4txtAño.Name = "tab4txtAño"
+        Me.tab4txtAño.Size = New System.Drawing.Size(58, 22)
+        Me.tab4txtAño.TabIndex = 7
+        '
+        'tab4txtMes
+        '
+        Me.tab4txtMes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tab4txtMes.Location = New System.Drawing.Point(71, 144)
+        Me.tab4txtMes.Name = "tab4txtMes"
+        Me.tab4txtMes.Size = New System.Drawing.Size(61, 22)
+        Me.tab4txtMes.TabIndex = 6
+        '
+        'tab4txtDia
+        '
+        Me.tab4txtDia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tab4txtDia.Location = New System.Drawing.Point(71, 106)
+        Me.tab4txtDia.Name = "tab4txtDia"
+        Me.tab4txtDia.Size = New System.Drawing.Size(61, 22)
+        Me.tab4txtDia.TabIndex = 5
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(35, 237)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(73, 16)
+        Me.Label20.TabIndex = 4
+        Me.Label20.Text = "Resultado:"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(35, 182)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(32, 16)
+        Me.Label19.TabIndex = 3
+        Me.Label19.Text = "Año"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(35, 144)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(34, 16)
+        Me.Label18.TabIndex = 2
+        Me.Label18.Text = "Mes"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(35, 106)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(29, 16)
+        Me.Label17.TabIndex = 1
+        Me.Label17.Text = "Día"
+        '
+        'Label16
+        '
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(32, 23)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(262, 70)
+        Me.Label16.TabIndex = 0
+        Me.Label16.Text = "Ingrese día, mes y año de una fecha para determinar si se trata de una fecha váli" & _
+            "da o no."
+        '
+        'TabPage5
+        '
+        Me.TabPage5.Controls.Add(Me.tab5btnCalcular)
+        Me.TabPage5.Controls.Add(Me.tab5txtB)
+        Me.TabPage5.Controls.Add(Me.tab5txtA)
+        Me.TabPage5.Controls.Add(Me.tab5lblResultado)
+        Me.TabPage5.Controls.Add(Me.Label24)
+        Me.TabPage5.Controls.Add(Me.Label23)
+        Me.TabPage5.Controls.Add(Me.Label22)
+        Me.TabPage5.Controls.Add(Me.Label21)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 58)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(314, 312)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "5- Fecha Mayor"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'Label21
+        '
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(24, 23)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(263, 53)
+        Me.Label21.TabIndex = 0
+        Me.Label21.Text = "Ingrese dos fechas con el formato DD/MM/AAAA para determinar cual es la mayor."
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label22.Location = New System.Drawing.Point(27, 96)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(60, 17)
+        Me.Label22.TabIndex = 1
+        Me.Label22.Text = "Fecha A"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label23.Location = New System.Drawing.Point(27, 132)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(60, 17)
+        Me.Label23.TabIndex = 2
+        Me.Label23.Text = "Fecha B"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label24.Location = New System.Drawing.Point(27, 183)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(76, 17)
+        Me.Label24.TabIndex = 3
+        Me.Label24.Text = "Resultado:"
+        '
+        'tab5lblResultado
+        '
+        Me.tab5lblResultado.AutoSize = True
+        Me.tab5lblResultado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.tab5lblResultado.Location = New System.Drawing.Point(105, 183)
+        Me.tab5lblResultado.Name = "tab5lblResultado"
+        Me.tab5lblResultado.Size = New System.Drawing.Size(88, 17)
+        Me.tab5lblResultado.TabIndex = 4
+        Me.tab5lblResultado.Text = "__________"
+        '
+        'tab5txtA
+        '
+        Me.tab5txtA.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.tab5txtA.Location = New System.Drawing.Point(93, 90)
+        Me.tab5txtA.Name = "tab5txtA"
+        Me.tab5txtA.Size = New System.Drawing.Size(100, 23)
+        Me.tab5txtA.TabIndex = 5
+        '
+        'tab5txtB
+        '
+        Me.tab5txtB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.tab5txtB.Location = New System.Drawing.Point(93, 126)
+        Me.tab5txtB.Name = "tab5txtB"
+        Me.tab5txtB.Size = New System.Drawing.Size(100, 23)
+        Me.tab5txtB.TabIndex = 6
+        '
+        'tab5btnCalcular
+        '
+        Me.tab5btnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.tab5btnCalcular.Location = New System.Drawing.Point(93, 240)
+        Me.tab5btnCalcular.Name = "tab5btnCalcular"
+        Me.tab5btnCalcular.Size = New System.Drawing.Size(75, 23)
+        Me.tab5btnCalcular.TabIndex = 7
+        Me.tab5btnCalcular.Text = "Calcular"
+        Me.tab5btnCalcular.UseVisualStyleBackColor = True
         '
         'Main
         '
@@ -601,6 +705,8 @@ Partial Class Main
         Me.TabPage3.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
+        Me.TabPage5.ResumeLayout(False)
+        Me.TabPage5.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -652,5 +758,14 @@ Partial Class Main
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
+    Friend WithEvents tab5btnCalcular As System.Windows.Forms.Button
+    Friend WithEvents tab5txtB As System.Windows.Forms.TextBox
+    Friend WithEvents tab5txtA As System.Windows.Forms.TextBox
+    Friend WithEvents tab5lblResultado As System.Windows.Forms.Label
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
 
 End Class
