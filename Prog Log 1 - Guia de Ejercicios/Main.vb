@@ -1,8 +1,8 @@
 ﻿Public Class Main
     'Variables para tab 2, el de N numeros
     Dim mayor As Integer = 0
-    Dim menor As Integer = 0
-    Dim Cantidad As Integer
+    Dim menor As Integer = 2147483647
+    Dim Cantidad As Integer = 0
     Dim promedio As Decimal
     Dim acumulador As Integer = 0
     Private Sub btnClasificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClasificar.Click
@@ -32,10 +32,19 @@
             tab2lblMayor.Text = mayor
         End If
 
-        If numero < mayor Then
-            menor = mayor
+        If numero < menor Then
+            menor = numero
             tab2lblMenor.Text = menor
         End If
+
+        Cantidad = Cantidad + 1
+        tab2lblCantidad.Text = Cantidad
+
+        For i = 1 To Cantidad
+            acumulador = acumulador + numero
+        Next i
+        promedio = acumulador / Cantidad
+        tab2lblPromedio.Text = promedio
     End Sub
     'Codigo de 3er tab COMPARADOR DE NUMEROS
     Private Sub tab3btnComparar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tab3btnComparar.Click
@@ -45,7 +54,7 @@
         If tab3txtNroA.Text > tab3txtNroB.Text And tab3txtNroA.Text > tab3txtNroC.Text Then
             mayor3 = tab3txtNroA.Text
         Else
-            If tab3txtNroB.Text > tab3txtNroA.Text And tab3txtNroB.Text > tab3txtNroC.Text Then
+            If tab3txtNroB.Text > tab3txtNroC.Text Then
                 mayor3 = tab3txtNroB.Text
             Else
                 mayor3 = tab3txtNroC.Text
@@ -57,7 +66,7 @@
         If tab3txtNroA.Text < tab3txtNroB.Text And tab3txtNroA.Text < tab3txtNroC.Text Then
             menor3 = tab3txtNroA.Text
         Else
-            If tab3txtNroB.Text < tab3txtNroA.Text And tab3txtNroB.Text < tab3txtNroC.Text Then
+            If tab3txtNroB.Text < tab3txtNroC.Text Then
                 menor3 = tab3txtNroB.Text
             Else
                 menor3 = tab3txtNroC.Text
