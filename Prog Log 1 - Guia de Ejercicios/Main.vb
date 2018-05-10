@@ -133,15 +133,13 @@
     End Function
 
     Private Sub tab5btnCalcular_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tab5btnCalcular.Click
-        'Dim fA As String = tab5txtA.Text
-        'Dim fB As String = tab5txtB.Text
         tab5lblResultado.Text = MayorFecha(tab5txtA.Text, tab5txtB.Text)
     End Sub
 
-    Function MayorFecha(ByVal fA, ByVal fB) As String
+    Function MayorFecha(ByVal fA As String, ByVal fB As String) As String
         Dim auxA, auxB As String
-        auxA = fA.substring(7, 4) & fA.substring(4, 2) & fA.subString(1, 2)
-        auxB = fB.substring(7, 4) & fB.substring(4, 2) & fB.subString(1, 2)
+        auxA = fA.Substring(6, 4) & fA.Substring(3, 2) & fA.Substring(0, 2)
+        auxB = fB.Substring(6, 4) & fB.Substring(3, 2) & fB.Substring(0, 2)
 
         If auxA > auxB Then
             Return fA
